@@ -24,6 +24,8 @@ from typing import Any, Dict, List, Optional
 
 import requests
 
+from dotenv import load_dotenv
+
 
 GITHUB_API = "https://api.github.com"
 
@@ -145,7 +147,13 @@ def main():
     ap.add_argument("--with-sha", action="store_true", help="Also fetch latest commit SHA on default branch.")
     args = ap.parse_args()
 
+    load_dotenv()
+
     token = os.getenv("GITHUB_TOKEN")
+    if not token:
+        print("[error] GITHUB_TOKEN not found. Create a local .env with GITHUB_TOKEN=... or export it in your shell.", file=sys.stderr)
+        print("See .env.example. Example: export GITHUB_TOKEN=ghp_xxx", file=sys.stderr)
+        sys.exit(1)
 
     # Build query
     query_parts = [
