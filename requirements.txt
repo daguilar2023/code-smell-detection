@@ -1,7 +1,1 @@
-requests
-pandas
-radon
-lizard
-gitpython
-tqdm
-python-dotenv
+python-dotenv==1.2.2
