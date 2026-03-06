@@ -1,0 +1,7 @@
+requests
+pandas
+radon
+lizard
+gitpython
+tqdm
+python-dotenv

@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+*.egg
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Data + outputs
+data/processed/
+data/raw/cloned_repos/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files with secrets
+.env
+.env.local
+
+# Editor
+.vscode/
+.idea/
